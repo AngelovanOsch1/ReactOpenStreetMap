@@ -3,8 +3,7 @@ name: Lint React App
 on:
   push:
     branches:
-      - main
-      - develop
+      - develop  # Change this to your main branch name
 
 jobs:
   lint:
@@ -19,6 +18,9 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 16  # Adjust the Node.js version as needed
+
+      - name: Change Directory
+        run: cd vite-project  # Replace 'your-project-directory' with the actual directory where your project is located
 
       - name: Install Dependencies
         run: npm install  # Or use yarn if you prefer
