@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import HitchCalculator from './HitchCalculator';
 
 function Homepage() {
   const [location1, setLocation1] = useState('');
@@ -50,23 +51,9 @@ function Homepage() {
   };
 
   return (
-    <div>
-      <h1>Distance Calculator</h1>
-      <input
-        type='text'
-        placeholder='Location 1'
-        value={location1}
-        onChange={(e) => setLocation1(e.target.value)}
-      />
-      <input
-        type='text'
-        placeholder='Location 2'
-        value={location2}
-        onChange={(e) => setLocation2(e.target.value)}
-      />
-      <button onClick={calculateDistance}>Calculate Distance</button>
-      {distance !== null && <p>Distance: {distance} kilometers</p>}
-    </div>
+    <>
+      <HitchCalculator/>
+    </>
   );
 }
 
