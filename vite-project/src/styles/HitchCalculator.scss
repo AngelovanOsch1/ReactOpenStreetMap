@@ -1,5 +1,85 @@
 @import 'Default';
 
-body{
 
+.hitch-calculator-container{
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 40px 200px;
+  header{
+    display: flex;
+    padding: 0 0 10px 0;
+    border-bottom: 2px solid #0002;
+    .logo{
+      color: map-get($colors, primary);
+      display: flex;
+      gap: 10px;
+      h1{
+        line-height: 5rem;
+        font-size: map-get($font-sizes , title );
+        span{
+          color: map-get($colors , black );
+        }
+      }}
+      .emergency-text{
+        margin-left: auto;
+        font-size: map-get($font-sizes, normal-text );
+        color: map-get($colors , black );
+        span{
+          font-weight: 500;
+          color: map-get($colors , orange );
+        }
+      }
+  }
+  form{
+    display: flex;
+    padding: 20px 0 0 0;
+    gap: 50px;
+    font-size: map-get($font-sizes, form-text );
+    .input-container{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      label{
+        font-weight: 600;
+      }
+      input{
+        border: 2px solid map-get($colors, black );
+        color: map-get($colors, primary );
+        padding: 10px 15px;
+        width: auto;
+        outline: none;
+        border-radius: 7px;
+        &:focus{
+          border: 2px solid map-get($colors, primary );
+        }
+      }
+    }
+    button{
+      position: relative;
+      background-color: map-get($colors, orange );
+      color: #fff;
+      font-weight: bold;
+      margin-top: auto;
+      border: none;
+      height: fit-content;
+      padding: 10px 45px 10px 20px;
+      font-size: map-get($font-sizes, normal-text );
+      border-radius: 7px;
+      transition: background 0.3s ease, scale 0.3s ease;
+      &::after{
+        content: '';
+        position: absolute;
+        right: 15px;
+        width: 20px;
+        height: 20px;
+        background-image: url('../assets/search.svg');
+        background-size: cover;
+      }
+      &:hover{
+        cursor: pointer;
+        background-color: map-get($colors, yellow );
+        scale: 105%;
+      }
+    }
+  }
 }
