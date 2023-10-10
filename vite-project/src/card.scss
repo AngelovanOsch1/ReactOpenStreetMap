@@ -1,0 +1,13 @@
+section {
+  display: flex;
+  flex-direction: column;
+  margin: 60px 120px 120px 120px;
+  height: 500px;
+  background-color: red;
+
+  .location-label {
+    background-color: #0000;
+    height: 50px;
+    width: 50px;
+  }
+}
